@@ -6,13 +6,13 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    margin: 2rem 0;
-    padding-top: 2rem;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .container {
     background-color: white;
-    padding: 2rem 3rem;
+    padding: 0;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -24,18 +24,19 @@ h1, h2, h3 {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Settings View */
 #settings-view {
     text-align: center;
+    padding: 0 3rem 2rem 3rem;
 }
 .welcome-header {
     margin-bottom: 2rem;
     padding: 2rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    margin: -2rem -3rem 2rem -3rem;
+    background: linear-gradient(135deg, #001f3f 0%, #003d7a 100%);
+    margin: 0 0 2rem 0;
     padding: 3rem 2rem 2rem 2rem;
     border-radius: 8px 8px 0 0;
     color: white;
@@ -74,6 +75,7 @@ h1, h2, h3 {
 #game-view {
     display: flex;
     flex-direction: column;
+    padding: 2rem 3rem;
 }
 .game-header {
     display: flex;
@@ -110,6 +112,9 @@ h1, h2, h3 {
 }
 
 /* Results View */
+#results-view {
+    padding: 2rem 3rem;
+}
 .results-options {
     text-align: center;
     margin: 1rem 0;
