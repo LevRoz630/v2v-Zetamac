@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V2v Buffed</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="settings-view">
+        <div class="welcome-header">
+          <h1>Welcome to V2V Zetamac</h1>
+          <p class="tagline">A New Era of Learning</p>
+        </div>
+        <p>
+          This is a fast-paced speed drill where you are given a set time to
+          solve as many arithmetic problems as you can.
+        </p>
+
+        <div class="settings-form">
+          <div class="operation">
+            <input type="checkbox" id="addition" checked />
+            <label for="addition"
+              >Addition Range: (<input type="number" id="add-min" value="2" />
+              to <input type="number" id="add-max" value="100" />) + (<input
+                type="number"
+                id="add-min-2"
+                value="2"
+              />
+              to <input type="number" id="add-max-2" value="100" />)</label
+            >
+          </div>
+          <div class="operation">
+            <input type="checkbox" id="subtraction" checked />
+            <label for="subtraction">Subtraction (Addition in reverse)</label>
+          </div>
+          <div class="operation">
+            <input type="checkbox" id="multiplication" checked />
+            <label for="multiplication"
+              >Multiplication Range: (<input
+                type="number"
+                id="mul-min"
+                value="2"
+              />
+              to <input type="number" id="mul-max" value="12" />) × (<input
+                type="number"
+                id="mul-min-2"
+                value="2"
+              />
+              to <input type="number" id="mul-max-2" value="100" />)</label
+            >
+          </div>
+          <div class="operation">
+            <input type="checkbox" id="division" checked />
+            <label for="division">Division (Multiplication in reverse)</label>
+          </div>
+
+          <label for="duration">Duration:</label>
+          <select id="duration">
+            <option value="30">30 seconds</option>
+            <option value="60">60 seconds</option>
+            <option value="120" selected>120 seconds</option>
+            <option value="300">300 seconds</option>
+            <option value="600">600 seconds</option>
+          </select>
+        </div>
+        <button id="start-btn">Start</button>
+      </div>
+
+      <div id="game-view" class="hidden">
+        <div class="game-header">
+          <span id="timer">Time left: 120</span>
+          <span id="score">Score: 0</span>
+        </div>
+        <div class="problem-area">
+          <span id="problem-text"></span>
+          <input type="text" id="answer-input" autocomplete="off" autofocus />
+        </div>
+      </div>
+
+      <div id="results-view" class="hidden">
+        <div class="stats-container">
+          <div class="stat-card">
+            <span class="stat-label">Final Score</span>
+            <span class="stat-value score-value" id="final-score-val">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Time</span>
+            <span class="stat-value" id="total-time-val">0s</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Avg. per Question</span>
+            <span class="stat-value avg-time-value" id="avg-time-val"
+              >0.00s</span
+            >
+          </div>
+        </div>
+
+        <div class="results-options">
+          <button id="try-again-btn">Try Again</button>
+          <button id="change-settings-btn">Change Settings</button>
+        </div>
+        <hr />
+        <h3>Game Analysis 📊</h3>
+        <div id="analysis-summary"></div>
+        <div class="table-container">
+          <table id="analysis-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Problem</th>
+                <th>Time (s)</th>
+                <th>Attempts</th>
+                <th>Your Tries</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="problem-area" id="practice-problem-area">
+          <span id="practice-problem-text"></span>
+          <input type="text" id="practice-answer-input" autocomplete="off" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

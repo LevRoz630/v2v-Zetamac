@@ -1,0 +1,205 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 2rem 0;
+    padding-top: 2rem;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Settings View */
+#settings-view {
+    text-align: center;
+}
+.welcome-header {
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: -2rem -3rem 2rem -3rem;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 8px 8px 0 0;
+    color: white;
+}
+.welcome-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.95;
+    font-weight: 300;
+}
+.settings-form {
+    text-align: left;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+.operation {
+    margin-bottom: 1rem;
+}
+.operation input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+#settings-view button {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+}
+
+/* Game View */
+#game-view {
+    display: flex;
+    flex-direction: column;
+}
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+/* Replace the old .problem-area rule with this one */
+.problem-area {
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    padding: 2rem; /* Add padding around the problem and input */
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Optional: subtle shadow for depth */
+}
+#answer-input, #practice-answer-input {
+    font-size: 2.2rem;
+    width: 160px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #333;
+    background-color: transparent;
+    outline: none;
+}
+#answer-input:focus, #practice-answer-input:focus {
+    border-bottom-color: #007bff;
+}
+
+/* Results View */
+.results-options {
+    text-align: center;
+    margin: 1rem 0;
+}
+button {
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    margin: 0 5px;
+}
+button:hover {
+    background-color: #e2e6ea;
+}
+#start-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+#start-btn:hover {
+    background-color: #0056b3;
+}
+
+/* NEW: Stat Card Styles */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.stat-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid #dee2e6;
+}
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.score-value {
+    color: #28a745; /* Green */
+}
+.avg-time-value {
+    color: #007bff; /* Blue */
+}
+
+.table-container {
+    margin-top: 2rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+#analysis-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#analysis-table th, #analysis-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#analysis-table th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+#analysis-summary {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.highlight {
+    font-weight: bold;
+    color: #d9534f;
+}
+#practice-problem-area {
+    margin-top: 2rem;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    min-height: 120px;
+}
