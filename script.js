@@ -263,6 +263,100 @@ document.addEventListener("DOMContentLoaded", () => {
     practiceCategory = slowestCategory;
   };
 
+  // Table Sorting Functionality
+  let currentSortColumn = null;
+  let currentSortDirection = "asc";
+
+  const sortTable = (columnIndex, dataType) => {
+    // Toggle direction if clicking the same column
+    if (currentSortColumn === columnIndex) {
+      currentSortDirection = currentSortDirection === "asc" ? "desc" : "asc";
+    } else {
+      currentSortColumn = columnIndex;
+      currentSortDirection = "asc";
+    }
+
+    // Create a copy of problemHistory with indices
+    const sortedData = problemHistory.map((p, index) => ({
+      ...p,
+      originalIndex: index + 1,
+    }));
+
+    // Sort based on column
+    sortedData.sort((a, b) => {
+      let valA, valB;
+
+      if (columnIndex === 2) {
+        // Time column
+        valA = a.time;
+        valB = b.time;
+      } else if (columnIndex === 3) {
+        // Attempts column
+        valA = a.attempts.length;
+        valB = b.attempts.length;
+      }
+
+      if (currentSortDirection === "asc") {
+        return valA - valB;
+      } else {
+        return valB - valA;
+      }
+    });
+
+    // Re-render the table
+    analysisTableBody.innerHTML = "";
+    sortedData.forEach((p) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${p.originalIndex}</td><td>${p.problem} <strong>${
+        p.answer
+      }</strong></td><td>${p.time.toFixed(2)}</td><td>${
+        p.attempts.length
+      }</td><td>${p.attempts.join(", ")}</td>`;
+      analysisTableBody.appendChild(row);
+    });
+
+    // Update header indicators
+    updateSortIndicators(columnIndex);
+  };
+
+  const updateSortIndicators = (activeColumn) => {
+    const headers = document.querySelectorAll("#analysis-table th");
+    headers.forEach((header, index) => {
+      // Remove existing indicators
+      header.classList.remove("sort-asc", "sort-desc", "sortable");
+      const existingArrow = header.querySelector(".sort-arrow");
+      if (existingArrow) existingArrow.remove();
+
+      // Add sortable class to Time and Attempts columns
+      if (index === 2 || index === 3) {
+        header.classList.add("sortable");
+        header.style.cursor = "pointer";
+
+        if (index === activeColumn) {
+          const arrow = document.createElement("span");
+          arrow.className = "sort-arrow";
+          arrow.textContent = currentSortDirection === "asc" ? " ▲" : " ▼";
+          header.appendChild(arrow);
+          header.classList.add(
+            currentSortDirection === "asc" ? "sort-asc" : "sort-desc"
+          );
+        }
+      }
+    });
+  };
+
+  const initTableSorting = () => {
+    const headers = document.querySelectorAll("#analysis-table th");
+    headers.forEach((header, index) => {
+      if (index === 2 || index === 3) {
+        // Time and Attempts columns
+        header.addEventListener("click", () => sortTable(index, "number"));
+        header.style.cursor = "pointer";
+        header.classList.add("sortable");
+      }
+    });
+  };
+
   // Event Listeners
   startBtn.addEventListener("click", startGame);
   answerInput.addEventListener("input", () => checkAnswer(answerInput));
@@ -271,6 +365,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ); // NEW
   tryAgainBtn.addEventListener("click", startGame);
   changeSettingsBtn.addEventListener("click", () => showView("settings"));
+
+  // Initialize table sorting
+  initTableSorting();
 
   showView("settings");
 });

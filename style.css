@@ -192,6 +192,24 @@ button:hover {
     background-color: #f2f2f2;
     position: sticky;
     top: 0;
+    user-select: none;
+}
+#analysis-table th.sortable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#analysis-table th.sortable:hover {
+    background-color: #e2e6ea;
+}
+#analysis-table th.sort-asc,
+#analysis-table th.sort-desc {
+    background-color: #d4e4f7;
+    font-weight: bold;
+}
+.sort-arrow {
+    font-size: 0.8rem;
+    margin-left: 4px;
+    color: #007bff;
 }
 #analysis-summary {
     text-align: center;
