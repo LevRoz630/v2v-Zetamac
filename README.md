@@ -1,17 +1,17 @@
-# v2v's zetamac: An Enhanced Arithmetic Practice Game 🧠
+# v2v-Zetamac: An Enhanced Arithmetic Practice Game 🧠
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://vedanthr5.github.io/ZetamacV2V/)
-[![GitHub Pages](https://img.shields.io/badge/Deployed_on-GitHub_Pages-success?style=for-the-badge&logo=github)](https://vedanthr5.github.io/ZetamacV2V/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://vedanthr5.github.io/v2v-Zetamac/)
+[![GitHub Pages](https://img.shields.io/badge/Deployed_on-GitHub_Pages-success?style=for-the-badge&logo=github)](https://vedanthr5.github.io/v2v-Zetamac/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-![v2v's zetamac](image.png)
+![v2v-Zetamac](image.png)
 
-> **[Try it live now!](https://vedanthr5.github.io/ZetamacV2V/)**
+> **[Try it live now!](https://vedanthr5.github.io/v2v-Zetamac/)**
 
-v2v's zetamac is a web-based arithmetic game inspired by the classic Zetamac speed drill. While the original is excellent for raw practice, it lacks feedback for targeted improvement. This version "buffs" the experience by adding a comprehensive post-game analysis dashboard to help you identify and work on your specific weaknesses.
+v2v-Zetamac is a web-based arithmetic game inspired by the classic Zetamac speed drill. While the original is excellent for raw practice, it lacks feedback for targeted improvement. This version "buffs" the experience by adding a comprehensive post-game analysis dashboard to help you identify and work on your specific weaknesses.
 
 ---
 
@@ -38,48 +38,19 @@ This app was built to answer those questions. It logs every correct answer, trac
 
 ---
 
-## How to Set It Up
-
-This is a simple, static web application with no backend or build steps required.
-
-### Running Locally
-
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/vedanthr5/ZetamacV2V.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd ZetamacV2V
-   ```
-3. Open the `index.html` file in any modern web browser.
-
-That's it! No installation, no dependencies, no build process.
-
-### Live Demo
-
-** Play now at: [https://vedanthr5.github.io/ZetamacV2V/](https://vedanthr5.github.io/ZetamacV2V/)**
-
-This project is deployed on GitHub Pages for instant access - no setup required!
-
----
-
 ## How to Use
 
 1. **Configure Your Game:**
-
    - Select which operations you want to practice (addition, subtraction, multiplication, division)
    - Adjust the number ranges for each operation type
    - Choose your game duration (30 seconds to 10 minutes)
 
 2. **Start Playing:**
-
    - Click "Start" to begin the timed drill
    - Type your answers and press Enter (or just keep typing - correct answers auto-submit!)
    - Watch your score and remaining time at the top
 
 3. **Review Your Performance:**
-
    - After time runs out, view your comprehensive analysis
    - See which questions took the longest
    - Identify your weakest operation category
@@ -91,37 +62,16 @@ This project is deployed on GitHub Pages for instant access - no setup required!
 
 ---
 
-## Technology Stack
-
-This project is built with pure web technologies:
-
-- **HTML5** - Structure and content
-- **CSS3** - Styling with modern flexbox layouts and gradients
-- **Vanilla JavaScript** - All game logic, no frameworks required
-
----
-
 ## Project Structure
 
 ```
-v2v's-zetamac/
+v2v-Zetamac/
 ├── index.html      # Main HTML structure
 ├── style.css       # All styling and visual design
 ├── script.js       # Game logic, analysis, and URL encoding
 ├── image.png       # Screenshot/preview image
 └── README.md       # This file
 ```
-
----
-
-## Browser Compatibility
-
-Works on all modern browsers:
-
-- Chrome/Edge (recommended)
-- Firefox
-- Safari
-- Opera
 
 ---
 
