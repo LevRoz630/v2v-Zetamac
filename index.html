@@ -116,6 +116,55 @@
               >(Leave 0 to disable)</span
             >
           </div>
+
+          <div class="operation" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ddd;">
+            <input type="checkbox" id="allow-decimals" />
+            <label for="allow-decimals" style="font-weight: bold;"
+              >Enable Decimal Division
+              <span style="font-size: 0.9rem; color: #666; font-weight: normal;">
+                (50% of division problems will have decimal answers)
+              </span>
+            </label>
+          </div>
+
+          <div style="margin-left: 2rem; margin-top: 0.5rem;">
+            <label for="decimal-places">Decimal places:</label>
+            <select id="decimal-places" style="margin-left: 0.5rem;">
+              <option value="1">1 (e.g. 12.5)</option>
+              <option value="2" selected>2 (e.g. 12.50)</option>
+              <option value="3">3 (e.g. 12.500)</option>
+            </select>
+          </div>
+
+          <div class="operation" style="margin-top: 1rem;">
+            <input type="checkbox" id="use-fraction-operands" />
+            <label for="use-fraction-operands" style="font-weight: bold;"
+              >Fraction Arithmetic Mode
+              <span style="font-size: 0.9rem; color: #666; font-weight: normal;">
+                (problems like <strong>1/2 + 1/3 = ?</strong>)
+              </span>
+            </label>
+          </div>
+
+          <div style="margin-left: 2rem; margin-top: 0.5rem;">
+            <label for="fraction-range">Max denominator:</label>
+            <select id="fraction-range" style="margin-left: 0.5rem;">
+              <option value="6">6 (easier)</option>
+              <option value="10" selected>10 (medium)</option>
+              <option value="12">12 (harder)</option>
+            </select>
+          </div>
+
+          <div style="margin: 1.5rem 0; padding: 1rem; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+            <strong>🔢 Fraction Arithmetic Examples:</strong>
+            <ul style="margin: 0.5rem 0 0 1.5rem; font-size: 0.9rem;">
+              <li><strong>Addition:</strong> 1/2 + 1/3 = <code>5/6</code></li>
+              <li><strong>Subtraction:</strong> 3/4 − 1/6 = <code>7/12</code></li>
+              <li><strong>Multiplication:</strong> 2/3 × 3/5 = <code>2/5</code></li>
+              <li><strong>Division:</strong> 1/2 ÷ 1/4 = <code>2</code></li>
+              <li>Answer formats: <code>5/6</code>, <code>2</code>, <code>1 1/2</code>, <code>1_1/2</code></li>
+            </ul>
+          </div>
         </div>
         <button id="start-btn">Start</button>
       </section>

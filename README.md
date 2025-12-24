@@ -1,14 +1,5 @@
 # v2v-Zetamac: An Enhanced Arithmetic Practice Game 🧠
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge)](https://vedanthr5.github.io/v2v-Zetamac/)
-[![GitHub Pages](https://img.shields.io/badge/Deployed_on-GitHub_Pages-success?style=for-the-badge&logo=github)](https://vedanthr5.github.io/v2v-Zetamac/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-
-![v2v-Zetamac](image.png)
-
 > **[Try it live now!](https://vedanthr5.github.io/v2v-Zetamac/)**
 
 v2v-Zetamac is a web-based arithmetic game inspired by the classic Zetamac speed drill. While the original is excellent for raw practice, it lacks feedback for targeted improvement. This version "buffs" the experience by adding a comprehensive post-game analysis dashboard to help you identify and work on your specific weaknesses.
